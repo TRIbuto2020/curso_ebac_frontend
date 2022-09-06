@@ -1,0 +1,129 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body > header{
+    background-color: #2f3640;
+    padding: 16px 0;
+    color: #f5f6fa;
+}
+
+header li a{
+    color: #f5f6fa;
+    text-decoration: none;
+}
+
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header li{
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-left: 16px;
+}
+
+.container{
+    width: 1366px;
+    margin: 0 auto;
+}
+
+.articles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.articles article img{
+    flex-shrink: 0;
+    min-width: 100%;
+    height: 100%;
+}
+
+.articles article{
+    width: 30%;
+    margin-bottom: 16px;
+}
+
+section{
+    padding: 16px 0;
+}
+
+section h2{
+    margin-bottom: 16px;
+    font-size: 32px;
+}
+
+.articles article h3{
+    margin:8px 0;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 56px;
+}
+
+.imagem{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.articles article a{
+    background-color: blue;
+    color: #fff;
+    padding: 8px;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.articles article a:hover{
+    text-decoration: underline;
+}
+
+
+.articles article p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#sports{
+    background-color: rgba(0, 255, 0, 0.1);
+}
+
+#sports .articles article a{
+    background-color: #009432;
+}
+
+#economy{
+    background-color: #f8f59f;
+}
+
+#economy .articles article a{
+    background-color: #ff9f1a;
+}
+
+#entertainment{
+    background-color: #df9ff8;
+}
+
+#entertainment .articles article a{
+    background-color: #ff1a4c;
+}
+
+#tech{
+    background-color: #9fcdf8;
+}
+
+#tech .articles article a{
+    background-color: #1a63ff;
+}
