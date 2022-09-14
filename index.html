@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="./images/icon.png">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Lista de Tarefas</h1>
+            <button id='open-form' type="button">+</button>
+            <button id='close-form' type="button">-</button>
+
+        </header>
+        <form>
+            <h2>Adicionar nova Tarefa</h2>
+            <input type="text" id="nova-tarefa" required placeholder="Nova tarefa" />
+            <button type="submit">Adicionar</button>
+        </form>
+        <div class="lista">
+            <div class="bot-all">
+                <button class="all-done allB">Marcar todos como feitos</button>
+                <button class="un-done allB">Marcar todos como não feitos</button>
+            </div>
+            <h2>A fazer:</h2>
+            <ul>
+            </ul>
+        </div>
+    </div>  
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
