@@ -2,166 +2,72 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Roboto, sans-serif;
+    font-family: 'Roboto', sans-serif;
     cursor: default;
 }
 
-body{
-    background-color: #c8d6e5;
-}
-
 .container{
-    max-width: 1080px;
+    max-width: 760px;
     width: 100%;
-    margin: auto;
+    margin: 120px auto;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow:
+    0 2.8px 2.2px rgba(20, 0, 60, 0.034),
+    0 6.7px 5.3px rgba(20, 0, 60, 0.048),
+    0 12.5px 10px rgba(20, 0, 60, 0.06),
+    0 22.3px 17.9px rgba(20, 0, 60, 0.072),
+    0 41.8px 33.4px rgba(20, 0, 60, 0.086),
+    0 100px 80px rgba(20, 0, 60, 0.12)
+    ;
 }
 
 header {
-    background-color: #4c4855;
+    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
     padding: 16px 0;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
     color: #fff;
     display: flex;
-    border-bottom-right-radius: 16px;
-    border-bottom-left-radius: 16px;
-    border-bottom: 16px solid #393742;
     justify-content: center;
     text-transform: uppercase;
     font-style: italic;
     align-items: center;
+    margin-bottom: 32px;
 }
 
-header h1{
-    font-size: 40px;
-}
-
-#open-form {
-    margin-left: 16px;
-    width: 36px;
-    height: 36px;
-    padding: 8px;
-    font-size: 24px;
-    line-height: 20px;
-    border-radius: 50%;
-}
-
-#close-form{
-    margin-left: 16px;
-    width: 36px;
-    height: 36px;
-    padding: 8px;
-    font-size: 24px;
-    line-height: 20px;
-    border-radius: 50%;
-    display: none;
-    background-color: rgb(156, 14, 14);
-}
-
-#close-form:hover{
-    background-color: rgb(82, 7, 7);
-}
-
-form {
-    background-color: #647b94;
-    padding: 24px 0;
-    text-align: center;
-    display: none;
-    width: 90%;
+form{
     margin: auto;
-    border-bottom-right-radius: 16px;
-    border-bottom-left-radius: 16px;
+    width: 50%;
+    margin-bottom: 32px;
 }
 
-form h2 {
-    margin-bottom: 16px;
-    text-transform: uppercase;
-    font-style: italic;
-}
-
-input, button {
-    padding: 8px;
-}
-
-input{
-    cursor: text;
-}
-
+form label,
 form input,
 form button{
-    border-radius: 4px;
+    display: block;
+    padding: 8px;
+    width: 100%;
+    border-radius: 8px;
 }
 
-button {
-    background-color: #009432;
-    border: none;
+form label{
+    font-weight: 700;
+    color: rgb(5, 6, 45);
+}
+
+form input{
+    cursor: text;
+    border: 1px solid transparent;
+    border-top: none;
+    border-bottom: 1px solid #DDD;
+    box-shadow: inset 0 1px 2px rgba(32, 0, 36, 0.39), 0 -1px 1px #FFF, 0 1px 0 #FFF;
+}
+
+form input:focus{
+    outline: 3px solid rgb(5, 6, 45);
+}
+
+form button{
+    margin-top: 16px;
     cursor: pointer;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #fff;
-}
-
-button:hover{
-    background-color: #055821;
-}
-
-.lista {
-    padding: 32px;
-    text-align: center;
-    width: 75%;
-    margin: auto;
-    background-color: #ece5ce;
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
-    border-bottom: 4px solid #a53c005d;
-    position: relative;
-}
-
-.bot-all{
-    position: absolute;
-    top: 8px;
-    left: 8px;
-}
-
-.allB{
-    font-size: 10px;
-    border: 3px solid #a53c005d;
-    background-color: #ffffff00;
-    border-radius: 4px;
-    font-family: 'Patrick Hand', cursive;
-    color: #a53c005d;
-}
-
-.allB:hover{
-    border: 3px solid #a53c00;
-    background-color: #ffffff00;
-    border-radius: 4px;
-    color: #a53c00;
-}
-
-
-.lista h2{
-    margin-bottom: 32px;
-    font-family: 'Patrick Hand', cursive;
-    font-size: 36px;
-}
-
-ul{
-    width: 60%;
-    margin: auto;
-    margin-bottom: 16px;
-}
-
-ul li {
-    list-style: circle inside;
-    font-family: 'Patrick Hand', cursive;
-    margin-bottom: 16px;
-}
-
-.tarefa{
-    font-size: 24px;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.feitoTarefa{
-    text-decoration: line-through;
 }

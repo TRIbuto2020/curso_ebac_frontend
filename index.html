@@ -4,38 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Tarefas</title>
+    <title>Cadastro</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="button.css">
     <link rel="icon" href="./images/icon.png">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Lista de Tarefas</h1>
-            <button id='open-form' type="button">+</button>
-            <button id='close-form' type="button">-</button>
-
+            <h1>Faça seu cadastro!</h1>
         </header>
         <form>
-            <h2>Adicionar nova Tarefa</h2>
-            <input type="text" id="nova-tarefa" required placeholder="Nova tarefa" />
-            <button type="submit">Adicionar</button>
-        </form>
-        <div class="lista">
-            <div class="bot-all">
-                <button class="all-done allB">Marcar todos como feitos</button>
-                <button class="un-done allB">Marcar todos como não feitos</button>
+            <div class="item-form">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" name="nome" id="nome">
             </div>
-            <h2>A fazer:</h2>
-            <ul>
-            </ul>
-        </div>
+            <div class="item-form">
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div class="item-form">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" name="telefone" id="telefone">
+            </div>
+            <div class="item-form">
+                <label for="cpf">CPF:</label>
+                <input type="text" name="cpf" id="cpf">
+            </div>
+            <div class="item-form">
+                <label for="endereco">Endereço Completo:</label>
+                <input type="text" name="endereco" id="endereco">
+            </div>
+            <div class="item-form">
+                <label for="cep">CEP:</label>
+                <input type="text" name="cep" id="cep">
+            </div>
+            <button class="button" type="submit"><span>Cadastre-se!</span></button>
+        </form>
     </div>  
+
+
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-    <script src="main.js"></script>
+    <script src="./js/jquery.mask.min.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
+    <script src="./js/messages_pt_BR.min.js"></script>
+    <script src="./js/main.js"></script>
+    </script>
 </body>
 </html>
