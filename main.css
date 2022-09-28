@@ -2,72 +2,56 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
     cursor: default;
 }
 
-.container{
-    max-width: 760px;
-    width: 100%;
-    margin: 120px auto;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow:
-    0 2.8px 2.2px rgba(20, 0, 60, 0.034),
-    0 6.7px 5.3px rgba(20, 0, 60, 0.048),
-    0 12.5px 10px rgba(20, 0, 60, 0.06),
-    0 22.3px 17.9px rgba(20, 0, 60, 0.072),
-    0 41.8px 33.4px rgba(20, 0, 60, 0.086),
-    0 100px 80px rgba(20, 0, 60, 0.12)
-    ;
-}
-
-header {
-    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
-    padding: 16px 0;
-    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    text-transform: uppercase;
-    font-style: italic;
-    align-items: center;
-    margin-bottom: 32px;
+h1{
+    margin-top: 32px; 
 }
 
 form{
-    margin: auto;
-    width: 50%;
-    margin-bottom: 32px;
+    margin-top: 32px;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow:
+    0 -2.8px 8.2px rgba(0, 0, 0, 0.05),
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
 }
 
-form label,
-form input,
-form button{
-    display: block;
-    padding: 8px;
-    width: 100%;
-    border-radius: 8px;
+.form-floating>label.error{
+    position: relative;
+    font-size: 16px;
+    padding: 0;
 }
 
-form label{
-    font-weight: 700;
-    color: rgb(5, 6, 45);
+.form-floating>.form-control:not(:placeholder-shown)~label.error{
+    transform: none;
+    opacity: 100%;
 }
 
-form input{
+.form-floating>.form-control:placeholder-shown~label.error{
+    transform: none;
+    opacity: 100%;
+}
+
+input{
     cursor: text;
-    border: 1px solid transparent;
-    border-top: none;
-    border-bottom: 1px solid #DDD;
-    box-shadow: inset 0 1px 2px rgba(32, 0, 36, 0.39), 0 -1px 1px #FFF, 0 1px 0 #FFF;
 }
 
-form input:focus{
-    outline: 3px solid rgb(5, 6, 45);
+input.error{
+    border: 2px solid brown;
+    color: brown;
 }
 
-form button{
-    margin-top: 16px;
-    cursor: pointer;
+input.error~label{
+    color: brown;
+}
+
+input.valid{
+    border: 2px solid rgb(11, 102, 31);
 }

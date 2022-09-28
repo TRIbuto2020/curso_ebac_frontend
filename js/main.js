@@ -8,6 +8,14 @@ $(document).ready(function() {
         };
     });
 
+    jQuery.validator.addMethod("telefone", function(value, element) {
+        if (/(\([0-9]{2}\)\s[0-9]{5}\-[0-9]{4})/.test(value)) {
+            return true;
+        } else {
+            return false;
+        };
+    });
+
     $('#telefone').mask('(00) 00000-0000', {
         placeholder: '(11) 98765-4321'
     });
@@ -30,16 +38,7 @@ $(document).ready(function() {
             },
             telefone: {
                 required: true,
-            },
-            cpf: {
-                required: true,
-            },
-            endereco: {
-                required: true,
-                fullname: true,
-            },
-            cep: {
-                required: true,
+                telefone: true,
             },
         },
         messages: {
@@ -50,13 +49,10 @@ $(document).ready(function() {
                 required: 'Esse campo é obrigatório.',
                 fullname: 'Por favor, insira seu nome e sobrenome.',
             },
-            telefone: 'Esse campo é obrigatório.',
-            cpf: 'Esse campo é obrigatório.',
-            endereco: {
+            telefone: {
                 required: 'Esse campo é obrigatório.',
-                fullname: 'Por favor, insira seu endereço completo.',
+                telefone: 'Por favor, insira sum número de telefone válido.',
             },
-            cep: 'Esse campo é obrigatório.',
         }
     })
 })
